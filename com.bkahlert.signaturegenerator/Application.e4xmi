@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_aXZ7QC51EeKnJNM9f5Ii8w" elementId="org.eclipse.e4.ide.application" bindingContexts="_aXZ7QS51EeKnJNM9f5Ii8w">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_aYECkC51EeKnJNM9f5Ii8w" label="Signature Generator" width="500" height="400">
+    <children xsi:type="advanced:PerspectiveStack" xmi:id="_aYSFBy51EeKnJNM9f5Ii8w">
+      <children xsi:type="advanced:Perspective" xmi:id="_aYSsEC51EeKnJNM9f5Ii8w">
+        <children xsi:type="basic:Part" xmi:id="_KkB3MC53EeKnJNM9f5Ii8w" elementId="com.bkahlert.devel.signaturegenerator.part.main" contributionURI="bundleclass://com.bkahlert.devel.signaturegenerator/com.bkahlert.devel.signaturegenerator.ui.parts.MainPart" label="Signature Generator"/>
+      </children>
+    </children>
+    <mainMenu xmi:id="_aYSFAC51EeKnJNM9f5Ii8w" elementId="menu:org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_aYSFAS51EeKnJNM9f5Ii8w" label="File">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_aYSFAi51EeKnJNM9f5Ii8w" label="Open" iconURI="platform:/plugin/com.bkahlert.devel.signaturegenerator/icons/sample.gif" command="_aYC0cC51EeKnJNM9f5Ii8w"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_aYSFAy51EeKnJNM9f5Ii8w" label="Save" iconURI="platform:/plugin/com.bkahlert.devel.signaturegenerator/icons/save_edit.gif" command="_aYDbgi51EeKnJNM9f5Ii8w"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_aYSFBC51EeKnJNM9f5Ii8w" label="Quit" command="_aX9U4C51EeKnJNM9f5Ii8w"/>
+      </children>
+      <children xsi:type="menu:Menu" xmi:id="_aYSFBS51EeKnJNM9f5Ii8w" label="Help">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_aYSFBi51EeKnJNM9f5Ii8w" label="About" command="_aYDbhS51EeKnJNM9f5Ii8w"/>
+      </children>
+    </mainMenu>
+    <trimBars xmi:id="_aYSsEy51EeKnJNM9f5Ii8w">
+      <children xsi:type="menu:ToolBar" xmi:id="_aYSsFC51EeKnJNM9f5Ii8w" elementId="toolbar:org.eclipse.ui.main.toolbar">
+        <children xsi:type="menu:HandledToolItem" xmi:id="_aYSsFS51EeKnJNM9f5Ii8w" iconURI="platform:/plugin/com.bkahlert.devel.signaturegenerator/icons/sample.gif" command="_aYC0cC51EeKnJNM9f5Ii8w"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_aYSsFi51EeKnJNM9f5Ii8w" iconURI="platform:/plugin/com.bkahlert.devel.signaturegenerator/icons/save_edit.gif" command="_aYDbgi51EeKnJNM9f5Ii8w"/>
+      </children>
+    </trimBars>
+  </children>
+  <handlers xmi:id="_aX978C51EeKnJNM9f5Ii8w" contributionURI="bundleclass://com.bkahlert.devel.signaturegenerator/com.bkahlert.devel.signaturegenerator.handlers.QuitHandler" command="_aX9U4C51EeKnJNM9f5Ii8w"/>
+  <handlers xmi:id="_aYDbgC51EeKnJNM9f5Ii8w" contributionURI="bundleclass://com.bkahlert.devel.signaturegenerator/com.bkahlert.devel.signaturegenerator.handlers.OpenHandler" command="_aYC0cC51EeKnJNM9f5Ii8w"/>
+  <handlers xmi:id="_aYDbgy51EeKnJNM9f5Ii8w" contributionURI="bundleclass://com.bkahlert.devel.signaturegenerator/com.bkahlert.devel.signaturegenerator.handlers.SaveHandler" command="_aYDbgi51EeKnJNM9f5Ii8w"/>
+  <handlers xmi:id="_aYDbhi51EeKnJNM9f5Ii8w" contributionURI="bundleclass://com.bkahlert.devel.signaturegenerator/com.bkahlert.devel.signaturegenerator.handlers.AboutHandler" command="_aYDbhS51EeKnJNM9f5Ii8w"/>
+  <bindingTables xmi:id="_aX-jAC51EeKnJNM9f5Ii8w" bindingContext="_aXZ7QS51EeKnJNM9f5Ii8w">
+    <bindings xmi:id="_aX-jAS51EeKnJNM9f5Ii8w" keySequence="M1+Q" command="_aX9U4C51EeKnJNM9f5Ii8w"/>
+    <bindings xmi:id="_aYDbgS51EeKnJNM9f5Ii8w" keySequence="M1+O" command="_aYC0cC51EeKnJNM9f5Ii8w"/>
+    <bindings xmi:id="_aYDbhC51EeKnJNM9f5Ii8w" keySequence="M1+S" command="_aYDbgi51EeKnJNM9f5Ii8w"/>
+    <bindings xmi:id="_aYDbhy51EeKnJNM9f5Ii8w" keySequence="M1+A" command="_aYDbhS51EeKnJNM9f5Ii8w"/>
+  </bindingTables>
+  <rootContext xmi:id="_aXZ7QS51EeKnJNM9f5Ii8w" elementId="org.eclipse.ui.contexts.dialogAndWindow" name="In Dialog and Windows">
+    <children xmi:id="_aXZ7Qi51EeKnJNM9f5Ii8w" elementId="org.eclipse.ui.contexts.window" name="In Windows"/>
+    <children xmi:id="_aXZ7Qy51EeKnJNM9f5Ii8w" elementId="org.eclipse.ui.contexts.dialog" name="In Dialogs"/>
+  </rootContext>
+  <commands xmi:id="_aX9U4C51EeKnJNM9f5Ii8w" elementId="org.eclipse.ui.file.exit" commandName="quitCommand"/>
+  <commands xmi:id="_aYC0cC51EeKnJNM9f5Ii8w" elementId="com.bkahlert.devel.signaturegenerator.open" commandName="openCommand"/>
+  <commands xmi:id="_aYDbgi51EeKnJNM9f5Ii8w" elementId="org.eclipse.ui.file.save" commandName="saveCommand"/>
+  <commands xmi:id="_aYDbhS51EeKnJNM9f5Ii8w" elementId="org.eclipse.ui.help.aboutAction" commandName="aboutCommand"/>
+  <addons xmi:id="_aXZ7RC51EeKnJNM9f5Ii8w" elementId="org.eclipse.e4.core.commands.service" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_aXZ7RS51EeKnJNM9f5Ii8w" elementId="org.eclipse.e4.ui.contexts.service" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_aXZ7Ri51EeKnJNM9f5Ii8w" elementId="org.eclipse.e4.ui.bindings.service" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_aXZ7Ry51EeKnJNM9f5Ii8w" elementId="org.eclipse.e4.ui.workbench.commands.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_aXZ7SC51EeKnJNM9f5Ii8w" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_aXZ7SS51EeKnJNM9f5Ii8w" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+</application:Application>
