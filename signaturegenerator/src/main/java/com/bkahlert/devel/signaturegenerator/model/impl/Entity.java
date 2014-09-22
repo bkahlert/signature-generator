@@ -10,11 +10,16 @@ public class Entity implements IEntity {
 
 	@XStreamAsAttribute
 	private String name;
+	
+	@XStreamAsAttribute
+	private String alias;
+	
 	private List<ITemplate> templates;
 	
 	@SuppressWarnings("unused")
 	private Entity() {
 		this.name = null;
+		this.alias = null;
 		this.templates = null;
 	}
 
@@ -26,6 +31,10 @@ public class Entity implements IEntity {
 
 	public String getName() {
 		return this.name;
+	}
+	
+	public String getAlias() {
+		return this.alias;
 	}
 
 	public List<ITemplate> getTemplates() {

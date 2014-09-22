@@ -23,6 +23,7 @@ public class ConfigSerializer {
 		xstream.addImplicitCollection(Config.class, "entities");
 		xstream.alias("entity", Entity.class);
 		xstream.useAttributeFor(Entity.class, "name");
+		xstream.useAttributeFor(Entity.class, "alias");
 		xstream.addImplicitCollection(Entity.class, "templates");
 		xstream.alias("template", Template.class);
 		xstream.addImplicitCollection(Template.class, "replacements");

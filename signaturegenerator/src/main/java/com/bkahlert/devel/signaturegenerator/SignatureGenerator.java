@@ -3,7 +3,9 @@ package com.bkahlert.devel.signaturegenerator;
 import java.io.File;
 import java.io.FileFilter;
 import java.io.FilenameFilter;
+import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.log4j.Logger;
@@ -105,6 +107,24 @@ public class SignatureGenerator {
 							+ entity.getName()
 							+ "\" since the template signature could not be found.");
 				}
+			}
+			if(entityDirectory.exists() && entity.getAlias() != null) {
+				File aliasDirectory = new File(entityDirectory.getParentFile(), entity.getAlias());
+				boolean aliasCreated = true;
+				if(aliasDirectory.exists())
+					try {
+						FileUtils.deleteDirectory(aliasDirectory);
+					} catch (IOException e) {
+						aliasCreated = false;
+						LOGGER.error("Error deleting alias directory", e);
+					}
+				try {
+					FileUtils.copyDirectory(entityDirectory, aliasDirectory);
+				} catch (IOException e) {
+					aliasCreated = false;
+					LOGGER.error("Error copying to alias directory",e);
+				}
+				if(aliasCreated) LOGGER.info("Successfuly created alias signature in \"" + entity.getAlias() + "\"");
 			}
 		}
 	}
