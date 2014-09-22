@@ -36,17 +36,14 @@ public class HtmlSignatureFieldReplacer extends TextSignatureFieldReplacer {
 		for (File srcDir : this.file.getParentFile().listFiles(
 				new FilenameFilter() {
 					public boolean accept(File dir, String name) {
-						String currentBaseName = FilenameUtils
-								.getBaseName(name);
-						String toBaseName = FilenameUtils.getBaseName(to
-								.getName());
-						return currentBaseName.startsWith(toBaseName)
-								&& new File(dir, currentBaseName).isDirectory();
+						File file = new File(dir, name);
+						// Folder names are not always deterministic
+						return file.isDirectory();
 					}
 				})) {
 			try {
 				File destDir = new File(to.getParentFile(),
-						FilenameUtils.getBaseName(srcDir.toString()));
+						FilenameUtils.getName(srcDir.toString()));
 				FileUtils.copyDirectory(srcDir, destDir);
 			} catch (IOException e) {
 				throw new ReplacementException(e);
